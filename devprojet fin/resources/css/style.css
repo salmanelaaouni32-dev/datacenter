@@ -1,0 +1,351 @@
+/* GENERAL & RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* -------------------- LAYOUT -------------------- */
+.main-header {
+    background: #2c3e50; /* Bleu foncé, couleur typique des Data Centers */
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.main-content {
+    padding: 20px;
+    min-height: 80vh; /* Assure que le contenu prend de la place */
+}
+
+.main-footer {
+    background: #7f8c8d;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+/* -------------------- NAVIGATION (Incluse via layouts/navigation.blade.php) -------------------- */
+.user-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.user-nav a, .logout-btn {
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 0.95rem;
+}
+
+.user-nav a:hover, .logout-btn:hover {
+    background-color: #34495e;
+}
+
+.user-info {
+    margin-right: 15px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* -------------------- FORMULAIRES & AUTHENTIFICATION -------------------- */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+.auth-form .form-group {
+    margin-bottom: 20px;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+}
+
+.form-check input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #3498db; /* Bleu vif */
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.auth-link a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* -------------------- MESSAGES & ALERTES -------------------- */
+/* GENERAL & RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* -------------------- LAYOUT -------------------- */
+.main-header {
+    background: #2c3e50; /* Bleu foncé, couleur typique des Data Centers */
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.main-content {
+    padding: 20px;
+    min-height: 80vh; /* Assure que le contenu prend de la place */
+}
+
+.main-footer {
+    background: #7f8c8d;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+/* -------------------- NAVIGATION (Incluse via layouts/navigation.blade.php) -------------------- */
+.user-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.user-nav a, .logout-btn {
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 0.95rem;
+}
+
+.user-nav a:hover, .logout-btn:hover {
+    background-color: #34495e;
+}
+
+.user-info {
+    margin-right: 15px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* -------------------- FORMULAIRES & AUTHENTIFICATION -------------------- */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+.auth-form .form-group {
+    margin-bottom: 20px;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+}
+
+.form-check input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #3498db; /* Bleu vif */
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.auth-link a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* -------------------- MESSAGES & ALERTES -------------------- */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.alert.success {
+    background-color: #2ecc71; /* Vert */
+    color: white;
+}
+
+.alert.error, .error-message {
+    background-color: #e74c3c; /* Rouge */
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 4px;
+    display: block;
+    font-size: 0.9rem;
+}
+
+/* Ajoutez ici d'autres styles pour les tableaux, boutons secondaires, etc. */.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.alert.success {
+    background-color: #2ecc71; /* Vert */
+    color: white;
+}
+
+.alert.error, .error-message {
+    background-color: #e74c3c; /* Rouge */
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 4px;
+    display: block;
+    font-size: 0.9rem;
+}
+
+/* Ajoutez ici d'autres styles pour les tableaux, boutons secondaires, etc. */

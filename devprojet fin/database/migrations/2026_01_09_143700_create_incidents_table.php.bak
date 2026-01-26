@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::dropIfExists('incidents');
+        Schema::create('incidents', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            // nullable incase resource is deleted or incident is general
+            $table->foreignId('resource_id')->nullable(); // Constraint removed temporarily
+            $table->string('title');
+            $table->text('description');
+            $table->string('status')->default('open'); // open, in_progress, resolved
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('incidents');
+    }
+};
